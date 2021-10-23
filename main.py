@@ -22,3 +22,9 @@ def random_select_from_N(N):
 #initialize the lattice 20 by 20
 lattice = np.zeros((20,20))
 #print(sequence_N_integers(15))
+
+def count_energy(array):
+    for i in range(len(array)):
+        for j in range(len(array)):
+            if array[i][j] !=0 :
+                
