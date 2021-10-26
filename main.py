@@ -13,7 +13,7 @@ T1 = 10
 kB = 1
 T = np.arange(T0, T1, 0.2)
 
-numebr_amino_acids = 15
+numebr_amino_acids = 5
 temperature = range(1,10)
 # both end points are in 2d (x,y)
 def distance(x1, y1, x2, y2):
@@ -41,10 +41,17 @@ for i in range(nx):
 #print(lattice)
 Num_Gen = 1000
 # one generation mean one loop over entire protein
-coordinate_over_time = np.zeros((Num_Gen,numebr_amino_acids))
+xcoordinate_over_time = np.zeros((Num_Gen,numebr_amino_acids))
+ycoordinate_over_time = np.zeros((Num_Gen,numebr_amino_acids))
+#zip(xcoordinate_over_time,ycoordinate_over_time)
+coordinate_over_time = np.array(zip(xcoordinate_over_time,ycoordinate_over_time))
+#xcoordinate_over_time[0,0] = 1
+print(coordinate_over_time)
 length_over_time = []
-energy_ = [randrange(-4,3) for _ in range(numebr_amino_acids)]
+energy_ = [randrange(-4,3) for _ in range(numebr_amino_acids - 1 )] #since energy is between two amino acids
 print(energy_)
+pass
+# a point is moveable if and only if there is at least one moveable position in next point's neigbour
 for t in T:
     for i in range(Num_Gen):
         for j in range(numebr_amino_acids):
