@@ -41,6 +41,7 @@ for i in range(nx):
 #print(lattice)
 Num_Gen = 1000
 # one generation mean one loop over entire protein
+coordinate_over_time = np.zeros((Num_Gen,numebr_amino_acids))
 length_over_time = []
 energy_ = [randrange(-4,3) for _ in range(numebr_amino_acids)]
 print(energy_)
