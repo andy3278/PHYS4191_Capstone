@@ -56,3 +56,6 @@ for t in T:
     for i in range(Num_Gen):
         for j in range(numebr_amino_acids):
             continue
+
+
+    
