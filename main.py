@@ -22,6 +22,9 @@ def distance(x1, y1, x2, y2):
 def sequence_N_integers(N):
     #array of numbers between 1-20, values represent type of amino acid, can repeat
     return [randrange(1,21) for _ in range(N)]
+def plot_sequence(x_list,y_list):
+    for i in range(len(x_list)):
+        plt.plot(x_list[i],y_list[i],color='red')
 
 
 
@@ -58,4 +61,3 @@ for t in T:
             continue
 
 
-    
